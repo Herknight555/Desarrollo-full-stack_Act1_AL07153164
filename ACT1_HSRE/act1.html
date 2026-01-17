@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech CusToms</title>
+    <link rel="icon" type="image/x-icon" href="Set.png">
+    <link rel="stylesheet" href="act1.css">
+</head>
+<body>
+    <h1>Tech CusToms</h1>
+    <h2>¿Qué es Tech CusToms?</h2>
+    <p class="descripcion">Tech CusToms es una empresa dedicada a la venta de productos tecnológicos personalizados,
+         ofrecemos productos de alta calidad y las mejores marcas del mercado. 
+         Nuestro compromiso es brindar una experiencia de compra excepcional a nuestros clientes, 
+        con un enfoque en la innovación y el servicio al cliente.</p>
+    <img class="logo" src="Set.png" alt="Logo de Tech CusToms">
+    <h3>Misión y Visión</h3>
+    <p class="Mision">Nuestra misión es liderar el mercado de productos tecnológicos personalizados, 
+        ofreciendo soluciones innovadoras y de alta calidad que satisfagan las necesidades y expectativas 
+        de nuestros clientes. Nos comprometemos a brindar un servicio excepcional, fomentando relaciones duraderas 
+        basadas en la confianza y la satisfacción del cliente.</p>
+    <p class="Vision">Nuestra visión es ser reconocidos como la empresa líder en el sector de productos 
+        tecnológicos personalizados, destacándonos por nuestra innovación, calidad y servicio al cliente.
+
+    <h4>Nuestros Proyectos</h4>
+    <section class="proyectos">
+        <div class="proyecto">
+            <img src="tecladoEVA.jpg" alt="Teclado mecánico personalizado con tema Neo Genesis Evangelion">
+            <h5>Teclado personalizado</h5>
+            <p>Este es un teclado mecanico tematico del anime Neo Genesis Evangelion con un acabado especial</p>
+        </div>
+        <div class="proyecto">
+            <img src="MousePOke.jpg" alt="Mouse gamer con diseño personalizado de Gengar">
+            <h5>Mouse personalizado</h5>
+            <p>Mouse gamer con diseño personalizado de Gengar</p>
+        </div>
+        <div class="proyecto">
+            <img src="audífonos.jpg" alt="Audífonos con diseño personalizado de Gengar">
+            <h5>Audífonos personalizados</h5>
+            <p>Audífonos con diseño personalizadode de Gengar</p>
+        </div>
+    </section>
+
+    <h5>Contacto</h5>
+    <section class="contacto">
+        <p>¿Tienes preguntas o comentarios? Contáctanos usando el formulario a continuación.</p>
+        <form id="formularioContacto" method="POST" onsubmit="return validarFormulario();">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required aria-label="Nombre completo">
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required aria-label="Correo electrónico">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required aria-label="Mensaje de contacto"></textarea>
+            <button type="submit">Enviar</button>                
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="https://tetr.io/" target="_blank">Tetr.io</a></li>
+                    <li><a href="https://github.com/Herknight555" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Tech CusToms. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function validarFormulario() {
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            if (nombre === '' || email === '' || mensaje === '') {
+                alert('Por favor, completa todos los campos.');
+                return false;
+            }
+
+            if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+                alert('Por favor, ingresa un correo electrónico válido.');
+                return false;
+            }
+
+            if (nombre.length < 3) {
+                alert('El nombre debe tener al menos 3 caracteres.');
+                return false;
+            }
+
+            alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+            document.getElementById('formularioContacto').reset();
+            return false;
+        }
+    </script>
+</body>
+</html>
