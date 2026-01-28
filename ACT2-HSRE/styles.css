@@ -1,0 +1,113 @@
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f5f5f5;  
+    margin: 0;  
+    padding: 20px;  
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* ESTILO PARA DESTACADO */
+li.destacado {
+    background-color: #f7c670;
+    border: 2px solid #ffa407;
+    box-shadow: 0 0 8px rgba(255, 147, 7, 0.5);
+    font-weight: bold;
+    transform: scale(1.02);
+}
+
+.tarea-nombre {
+    flex-grow: 1;
+    word-break: break-word;
+}
+
+.botones {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.btn-destacar {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-destacar:hover {
+    background-color: #e0a800;
+}
+
+.btn-editar {
+    background-color: #28a72a;
+}
+
+.btn-editar:hover {
+    background-color: #218824;
+}
+
+.btn-eliminar {
+    background-color: #dc3535;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82323;
+}
+
+.error {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 10px;
+}
